@@ -1,0 +1,22 @@
+apply from: "/builder/dependent-version.gradle"
+ext {
+    android = [
+            compileSdkVersion = android_version['compile'],
+            applicationId = "org.alee.component.demo.repeatclick",
+            minSdkVersion = android_version['min'],
+            targetSdkVersion = android_version['compile'],
+            versionCode = LOCAL_VERSION_CODE as Integer,
+            versionName = LOCAL_VERSION_NAME,
+            buildToolsVersion = android_version['build_tool'],
+    ]
+
+    Official_Library = [
+            appcompat: "androidx.appcompat:appcompat:${official_library_version['appcompatX']}",
+            recyclerview: "com.android.support:recyclerview-v7:28.0.0"
+    ]
+
+    Tripartite_Library = [
+            aspectJ     : "org.aspectj:aspectjrt:${tripartite_library_version['aspectJ']}",
+    ]
+
+}

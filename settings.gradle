@@ -1,0 +1,3 @@
+include ':RepeatClickLib'
+include ':app'
+rootProject.name = "RepeatClick"
